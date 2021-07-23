@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Author;
+use App\Services\AuthorService;
 use App\Traits\ApiResponser;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Services\AuthorService;
 
 class AuthorController extends Controller
 {

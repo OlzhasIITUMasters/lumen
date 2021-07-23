@@ -2,14 +2,14 @@
 
 namespace App\Exceptions;
 
-use Exception;
 use App\Traits\ApiResponser;
-use Illuminate\Http\Response;
+use Exception;
 use GuzzleHttp\Exception\ClientException;
-use Illuminate\Auth\AuthenticationException;
-use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Http\Response;
+use Illuminate\Validation\ValidationException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
@@ -89,6 +89,5 @@ class Handler extends ExceptionHandler
         }
 
         return $this->errorResponse('Unexpected error. Try later', Response::HTTP_INTERNAL_SERVER_ERROR);
-
     }
 }
